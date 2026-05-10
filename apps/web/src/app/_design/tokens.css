@@ -1,0 +1,91 @@
+/* ─────────────────────────────────────────────────────────────────────────
+   Asciigen design tokens — Orinadus aesthetic with Inter font
+   ───────────────────────────────────────────────────────────────────────── */
+
+:root {
+  /* page */
+  --o-bg:                  #050507;
+  --o-fg:                  rgba(255, 255, 255, 0.92);
+
+  /* glass */
+  --glass-bg:              rgba(12, 12, 18, 0.55);
+  --glass-bg-strong:       rgba(12, 12, 18, 0.78);
+  --glass-border:          rgba(255, 255, 255, 0.07);
+  --glass-border-strong:   rgba(255, 255, 255, 0.13);
+  --glass-highlight:       inset 0 0.5px 0 rgba(255, 255, 255, 0.10);
+  --glass-shadow:          0 0 0 0.5px rgba(255, 255, 255, 0.04), 0 32px 80px rgba(0, 0, 0, 0.78);
+  --glass-blur-panel:      blur(32px) saturate(240%);
+  --glass-blur-nav:        blur(20px) saturate(180%);
+
+  /* nav / chrome */
+  --nav-bg:                rgba(5, 5, 7, 0.78);
+
+  /* button */
+  --btn-bg:                rgba(255, 255, 255, 0.04);
+  --btn-bg-hov:            rgba(255, 255, 255, 0.09);
+  --btn-border:            rgba(255, 255, 255, 0.07);
+  --btn-border-hov:        rgba(255, 255, 255, 0.14);
+  --btn-color:             rgba(255, 255, 255, 0.62);
+  --btn-color-hov:         rgba(255, 255, 255, 0.92);
+  --btn-shadow:            inset 0 0.5px 0 rgba(255, 255, 255, 0.09);
+  --btn-shadow-hov:        inset 0 0.5px 0 rgba(255, 255, 255, 0.14), 0 2px 8px rgba(0, 0, 0, 0.35);
+
+  /* primary (filled) button */
+  --btn-primary-bg:        rgba(255, 255, 255, 0.92);
+  --btn-primary-text:      #050507;
+
+  /* input */
+  --input-bg:              rgba(255, 255, 255, 0.04);
+  --input-focus:           rgba(255, 255, 255, 0.30);
+
+  /* text */
+  --text-primary:          rgba(255, 255, 255, 0.92);
+  --text-secondary:        rgba(255, 255, 255, 0.55);
+  --text-muted:            rgba(255, 255, 255, 0.32);
+
+  /* accent — colored buttons (glints) */
+  --glint-prism-1:         rgba(255, 100, 150, 0.85);
+  --glint-prism-2:         rgba(80, 160, 255, 0.85);
+  --glint-prism-3:         rgba(180, 80, 255, 0.85);
+  --glint-prism-4:         rgba(255, 210, 60, 0.78);
+  --glint-prism-5:         rgba(60, 220, 170, 0.85);
+
+  /* sizing */
+  --nav-h:                 54px;
+  --radius-panel:          12px;
+  --radius-btn:            6px;
+
+  /* motion */
+  --ease-quart:            cubic-bezier(0.16, 1, 0.3, 1);
+  --dur-fast:              140ms;
+  --dur-med:               220ms;
+}
+
+/* Base resets */
+body {
+  background: var(--o-bg);
+  color: var(--o-fg);
+  font-family: var(--font-inter), sans-serif;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Shared keyframes */
+@keyframes spin-360 {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes logo-breathe {
+  0%, 100% { opacity: 0.62; }
+  50%       { opacity: 0.92; }
+}
+
+@keyframes holo-spin {
+  to { --holo-angle: 360deg; }
+}
+
+@property --holo-angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
