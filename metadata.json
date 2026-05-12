@@ -1,0 +1,12 @@
+{
+  "name": "asciigen",
+  "type": "tool",
+  "description": "Minimal ASCII art generator for CLI and web.",
+  "stage": "prototype",
+  "org": "madebymadhouse",
+  "repo": "madebymadhouse/asciigen",
+  "public": true,
+  "started": "2025-01-01",
+  "updated": "2026-05-11",
+  "notes": "Monorepo with CLI and web packages. Needs proper release before considered shipped."
+}
